@@ -2,6 +2,9 @@
 
 这个网站基于[vitepress](https://github.com/vuejs/vitepress)搭建的
 
+网站首页如下图:
+![网站的首页](./static/home.png)
+
 ## 介绍
 
 这是我的文档站，也是我的博客，用来记录我学习前端过程中整理的文档，还有我平时记录的笔记，还有我总结 ai 总结的一些经验和知识。
