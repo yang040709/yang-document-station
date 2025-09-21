@@ -2,10 +2,29 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  //页面的元数据
   title: "Yang的文档站",
+  titleTemplate: ":title | Yang的文档站", //这里的 :title 将替换为从页面的第一个 <h1> 标题推断出文本
   lang: "zh-CN",
-  description: "好记性不如烂笔头",
+  base: "/", //果计划在子路径例如 GitHub 页面下部署站点，则需要设置此项。
+  description:
+    "一个记录我学习前端的文档站，系统梳理前端核心概念、API用法及实现原理，方便查阅和复习",
   head: [["link", { rel: "icon", type: "image/png", href: "/logo.png" }]],
+  //路由
+  cleanUrls: true, //当设置为 true 时，VitePress 将从 URL 中删除 .html 后缀
+  // rewrites: {
+  //   // 'source/:page': 'destination/:page' //例如这个规则
+  // },
+  //构建
+  // srcDir: "./", //相对于项目根目录的 markdown 文件所在的文件夹
+  // srcExclude: ["**/README.md"],
+  // outDir: "docs/.vitepress/dist",//输出的位置
+  // assetsDir: "assets",//静态资源的输出目录
+  // ignoreDeadLinks: true,//当设置为 true 时，VitePress 将忽略所有死链接，而不是抛出错误
+  //主题
+  // appearance: "dark", //默认主题
+  lastUpdated: true, //是否使用 Git 获取每个页面的最后更新时间戳
+
   themeConfig: {
     logo: "/logo.png",
     // https://vitepress.dev/reference/default-theme-config
@@ -31,39 +50,42 @@ export default defineConfig({
         link: "http://yang0709.3vfree.club/",
       },
     ],
-    sidebar: [
-      {
-        text: "vue3文档",
-        items: [
-          {
-            text: "vue3",
-            link: "/vue3",
-          },
-        ],
-      },
-      {
-        text: "vue2文档",
-        items: [
-          {
-            text: "vue2",
-            link: "/vue2",
-          },
-        ],
-      },
-      {
-        text: "vue生态",
-        items: [
-          {
-            text: "pinia",
-            link: "/vue-ecology/pinia",
-          },
-          {
-            text: "vue-router",
-            link: "/vue-ecology/vue-router",
-          },
-        ],
-      },
-    ],
+    sidebar: {
+      "/": [
+        {
+          text: "vue3文档",
+          items: [
+            {
+              text: "vue3",
+              link: "/vue3",
+            },
+          ],
+        },
+        {
+          text: "vue2文档",
+          items: [
+            {
+              text: "vue2",
+              link: "/vue2",
+            },
+          ],
+        },
+        {
+          text: "vue生态",
+          items: [
+            {
+              text: "pinia",
+              link: "/vue-ecology/pinia",
+            },
+            {
+              text: "vue-router",
+              link: "/vue-ecology/vue-router",
+            },
+          ],
+        },
+      ],
+    },
+    // aside:"left",//false=>关闭,true=>右边,left=>左边
     // outline: [2, 3],
     socialLinks: [{ icon: "github", link: "https://github.com/yang040709" }],
     footer: {
@@ -76,6 +98,7 @@ export default defineConfig({
       next: "下一篇",
     },
     search: {
+      // 启动搜索
       provider: "local",
     },
     outline: {
@@ -113,7 +136,13 @@ export default defineConfig({
       detailsLabel: "详细信息",
     },
     image: {
-      lazyLoading: true,
+      lazyLoading: true, //是否启用图片懒加载
+    },
+  },
+  vite: {
+    server: {
+      host: true,
+      port: 4023,
     },
   },
 });

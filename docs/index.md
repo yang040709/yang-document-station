@@ -11,11 +11,11 @@ hero:
     alt: yang document station
   actions:
     - theme: brand
-      text: vue3文档
+      text: 开始浏览
       link: /vue3
     - theme: alt
-      text: vue2文档
-      link: /vue2
+      text: github
+      link: https://github.com/yang040709/yang-document-station
 
 features:
   - title: 知识点整理
