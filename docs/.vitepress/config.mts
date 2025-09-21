@@ -43,6 +43,10 @@ export default defineConfig({
             text: "vue-router",
             link: "/vue-ecology/vue-router",
           },
+          {
+            text: "vite-press",
+            link: "/vue-ecology/vite-press",
+          },
         ],
       },
       {
@@ -80,6 +84,10 @@ export default defineConfig({
             {
               text: "vue-router",
               link: "/vue-ecology/vue-router",
+            },
+            {
+              text: "vite-press",
+              link: "/vue-ecology/vite-press",
             },
           ],
         },
