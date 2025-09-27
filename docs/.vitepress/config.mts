@@ -6,7 +6,8 @@ export default defineConfig({
   title: "Yang的文档站",
   titleTemplate: ":title | Yang的文档站", //这里的 :title 将替换为从页面的第一个 <h1> 标题推断出文本
   lang: "zh-CN",
-  base: "/", //果计划在子路径例如 GitHub 页面下部署站点，则需要设置此项。
+  base: "/",
+  // base: "/document/",//如果计划在子路径例如 GitHub 页面下部署站点，则需要设置此项。
   description:
     "一个记录我学习前端的文档站，系统梳理前端核心概念、API用法及实现原理，方便查阅和复习",
   head: [["link", { rel: "icon", type: "image/png", href: "/logo.png" }]],
@@ -46,6 +47,10 @@ export default defineConfig({
           {
             text: "vite-press",
             link: "/vue-ecology/vite-press",
+          },
+          {
+            text: "vitest",
+            link: "/vue-ecology/vitest",
           },
         ],
       },
@@ -88,6 +93,10 @@ export default defineConfig({
             {
               text: "vite-press",
               link: "/vue-ecology/vite-press",
+            },
+            {
+              text: "vitest",
+              link: "/vue-ecology/vitest",
             },
           ],
         },
