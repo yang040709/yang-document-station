@@ -33,4 +33,4 @@ pnpm dev
 ## 如何编写文档
 
 在 docs 文件下编写 md 文件即可
-然后可以在 vitepress/config.ts 中跟着我的配置进行配置项目的导航，具体配置详细过程请查看[vite 文档](https://vitepress.dev/zh/)
+然后可以在 vitepress/config.ts 中跟着我的配置进行配置项目的导航，具体配置详细过程请查看[vitepress 官方文档](https://vitepress.dev/zh/)
